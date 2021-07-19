@@ -5,6 +5,7 @@
 	import Instagram from './icons/Instagram.svelte';
 	import Twitter from './icons/Twitter.svelte';
 	import Soundcloud from './icons/Soundcloud.svelte';
+	import Spotify from './icons/Spotify.svelte';
 
 	let showAbout = false
 
@@ -35,14 +36,17 @@
 				/>
 			{/if}
 			<div id='social-links'>
-				<a href='https://urlgeni.us/instagram/ZECUellimist' target='blank'>
+				<a href='https://urlgeni.us/instagram/ZECUellimist' class='add-15' target='blank'>
 					<Instagram ref='instaHome' size={30} />
 				</a>
-				<a href='https://urlgeni.us/twitter/Qu2Uellimist' target='blank'>
+				<a href='https://urlgeni.us/twitter/Qu2Uellimist' class='add-15' target='blank'>
 					<Twitter ref='twitterHome' size={30} />
 				</a>
-				<a href='https://urlgeni.us/soundcloud/zhTRellimist' target='blank'>
+				<a href='https://urlgeni.us/soundcloud/zhTRellimist' class='add-15' target='blank'>
 					<Soundcloud ref='soundcloudHome' size={30} />
+				</a>
+				<a href='https://urlgeni.us/soundcloud/zhTRellimist' target='blank'>
+					<Spotify ref='spotifyHome' size={32} />
 				</a>
 			</div>
 		</div>
@@ -55,12 +59,8 @@
 </main>
 
 <style>
-	:global([ref=instaHome]) {
-		margin-bottom: 15px;
-	}
-
-	:global([ref=twitterHome]) {
-		margin-bottom: 15px;
+	.add-15 {
+		margin-bottom: 15px ;
 	}
 
 	#contact-wrapper {
@@ -151,5 +151,12 @@
 		border-radius: 9px;
 		overflow: hidden;
 		position: relative;
+	}
+
+	@media screen and (max-width: 660px) {
+		.rounded-box {
+			width: calc(100% - 70px);
+			height: calc(100% - 70px);
+		}
 	}
 </style>

@@ -90,6 +90,7 @@
 		font-weight: 400;
 		position: relative;
 		animation: text-glow-1 7s infinite linear;
+		margin-top: -10rem;
 
     &:hover {
 			cursor: default;
